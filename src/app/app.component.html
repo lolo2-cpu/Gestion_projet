@@ -1,3 +1,24 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu contentId="main-content" side="start">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Gestion Projet</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-item routerLink="/home">Accueil</ion-item>
+        <ion-item routerLink="/tableau-de-bord">Dashboard</ion-item>
+        <ion-item routerLink="/liste-projets">Projets</ion-item>
+        <ion-item routerLink="/liste-taches">Tâches</ion-item>
+        <ion-item routerLink="/liste-utilisateurs">Utilisateurs</ion-item>
+        <ion-item routerLink="/rapports">Rapports</ion-item>
+        <ion-item routerLink="/connexion">Connexion</ion-item>
+        <ion-item routerLink="/inscription">Inscription</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
 </ion-app>

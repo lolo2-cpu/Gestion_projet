@@ -1,0 +1,110 @@
+$primary-blue: #2563EB;
+$success-green: #22C55E;
+$warning-orange: #f59e0b;
+$box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+$box-shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.12);
+
+.tasks-content {
+  --background: linear-gradient(135deg, #f8f9fa 0%, #f3f4f6 100%);
+}
+
+.tasks-header {
+  padding: 24px;
+  background: linear-gradient(135deg, $primary-blue, #1e40af);
+  color: white;
+  margin-bottom: 20px;
+
+  h2 {
+    color: white;
+    font-size: 24px;
+    margin: 0 0 8px 0;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    margin: 0;
+  }
+}
+
+.tasks-filters {
+  display: flex;
+  gap: 12px;
+  padding: 16px 16px 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+
+  ion-chip {
+    white-space: nowrap;
+  }
+}
+
+.tasks-list {
+  padding: 0 16px;
+}
+
+.task-card {
+  margin-bottom: 16px;
+  border-radius: 16px;
+  box-shadow: $box-shadow;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: $box-shadow-hover;
+    transform: translateY(-4px);
+  }
+}
+
+.task-content {
+  padding: 20px;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.task-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+  flex: 1;
+}
+
+.task-status {
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.task-description {
+  color: #666;
+  font-size: 14px;
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+
+.task-footer {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+
+  ion-button {
+    --color: $primary-blue;
+    font-size: 12px;
+  }
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+
+  p {
+    color: #999;
+    font-size: 16px;
+  }
+}

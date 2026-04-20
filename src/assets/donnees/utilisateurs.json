@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nom": "Dupont",
+    "prenom": "Jean",
+    "email": "jean.dupont@email.com",
+    "role": "Développeur",
+    "avatar": "assets/icon/default-avatar.png"
+  },
+  {
+    "id": 2,
+    "nom": "Martin",
+    "prenom": "Marie",
+    "email": "marie.martin@email.com",
+    "role": "Chef de projet",
+    "avatar": "assets/icon/default-avatar.png"
+  },
+  {
+    "id": 3,
+    "nom": "Dubois",
+    "prenom": "Pierre",
+    "email": "pierre.dubois@email.com",
+    "role": "Designer",
+    "avatar": "assets/icon/default-avatar.png"
+  }
+]

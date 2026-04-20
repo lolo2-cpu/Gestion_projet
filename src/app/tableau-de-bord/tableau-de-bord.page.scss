@@ -1,0 +1,49 @@
+$primary-blue: #2563EB;
+
+ion-content {
+  --background: linear-gradient(135deg, #f8f9fa 0%, #f3f4f6 100%);
+}
+
+.dashboard-header {
+  padding: 24px;
+  background: linear-gradient(135deg, $primary-blue, #1e40af);
+  color: white;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 20px;
+
+  h2 {
+    color: white;
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 8px 0 0 0;
+    font-size: 14px;
+  }
+}
+
+.widgets-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: 0 16px;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.section-title {
+  padding: 24px 16px 16px 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-top: 20px;
+}

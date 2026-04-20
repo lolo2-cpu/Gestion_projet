@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Liste des projets</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-button routerLink="/creation-projet">
+    Nouveau Projet
+  </ion-button>
+
+  <ion-card *ngFor="let projet of projets">
+    <ion-card-header>
+      <ion-card-title>{{ projet.nom }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Budget : {{ projet.budget }}
+      <br>
+      Statut : {{ projet.statut }}
+
+      <ion-button size="small"
+        [routerLink]="['/detail-projet', projet.id]">
+        Détails
+      </ion-button>
+
+      <ion-button size="small" color="danger"
+        (click)="supprimer(projet.id)">
+        Supprimer
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

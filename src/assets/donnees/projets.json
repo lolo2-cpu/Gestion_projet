@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "nom": "Projet Alpha",
+    "description": "Développement d'une application web",
+    "budget": 50000,
+    "statut": "En cours",
+    "dateDebut": "2024-01-01",
+    "dateFin": "2024-06-01"
+  },
+  {
+    "id": 2,
+    "nom": "Projet Beta",
+    "description": "Refonte du système de gestion",
+    "budget": 75000,
+    "statut": "Planifié",
+    "dateDebut": "2024-03-01",
+    "dateFin": "2024-09-01"
+  },
+  {
+    "id": 3,
+    "nom": "Projet Gamma",
+    "description": "Migration vers le cloud",
+    "budget": 100000,
+    "statut": "Terminé",
+    "dateDebut": "2023-06-01",
+    "dateFin": "2023-12-01"
+  }
+]

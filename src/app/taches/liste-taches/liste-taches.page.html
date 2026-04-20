@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Mes tâches</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/creation-tache">
+        <ion-icon name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="tasks-content">
+  <div class="tasks-header">
+    <h2>Tâches en cours</h2>
+    <p>{{ taches?.length || 0 }} tâche(s)</p>
+  </div>
+
+  <div class="tasks-filters">
+    <ion-chip color="primary" outline>Toutes</ion-chip>
+    <ion-chip outline>En cours</ion-chip>
+    <ion-chip outline>Terminées</ion-chip>
+  </div>
+
+  <div class="tasks-list">
+    <ion-card *ngFor="let tache of taches" class="task-card">
+      <ion-card-content class="task-content">
+        <div class="task-header">
+          <h3 class="task-title">{{ tache.titre }}</h3>
+          <ion-chip [color]="tache.statut === 'Terminée' ? 'success' : 'warning'"
+                   class="task-status">{{ tache.statut }}</ion-chip>
+        </div>
+        <p class="task-description">Description de la tâche</p>
+        <div class="task-footer">
+          <ion-button size="small" fill="clear">Détails</ion-button>
+          <ion-button size="small" fill="clear">Supprimer</ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div *ngIf="!taches || taches.length === 0" class="empty-state">
+    <p>Aucune tâche pour le moment</p>
+  </div>
+</ion-content>

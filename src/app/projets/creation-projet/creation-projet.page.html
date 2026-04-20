@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Nouveau Projet</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item>
+    <ion-input placeholder="Nom"
+      [(ngModel)]="projet.nom">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input placeholder="Budget"
+      [(ngModel)]="projet.budget">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-select placeholder="Statut"
+      [(ngModel)]="projet.statut">
+      <ion-select-option value="En cours">En cours</ion-select-option>
+      <ion-select-option value="Terminé">Terminé</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-button expand="block"
+    (click)="ajouter()">
+    Enregistrer
+  </ion-button>
+
+</ion-content>

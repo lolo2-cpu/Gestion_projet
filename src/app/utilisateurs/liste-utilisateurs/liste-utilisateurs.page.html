@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Utilisateurs</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="person-add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="users-content">
+  <div class="users-header">
+    <h2>Liste des utilisateurs</h2>
+    <p>{{ utilisateurs?.length || 0 }} utilisateur(s)</p>
+  </div>
+
+  <ion-list class="users-list">
+    <ion-item *ngFor="let utilisateur of utilisateurs" class="user-item">
+      <ion-avatar slot="start" class="user-avatar">
+        <img [src]="utilisateur.avatar || 'assets/icon/default-avatar.png'" alt="Avatar">
+      </ion-avatar>
+      <ion-label class="user-info">
+        <h3 class="user-name">{{ utilisateur.nom }} {{ utilisateur.prenom }}</h3>
+        <p class="user-email">{{ utilisateur.email }}</p>
+      </ion-label>
+      <ion-button fill="clear" [routerLink]="['/detail-utilisateur', utilisateur.id]" size="small">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <div *ngIf="!utilisateurs || utilisateurs.length === 0" class="empty-state">
+    <ion-icon name="people-outline"></ion-icon>
+    <p>Aucun utilisateur pour le moment</p>
+  </div>
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Connexion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-content">
+  <div class="auth-container">
+    <div class="auth-header">
+      <h1>Connexion</h1>
+      <p>Accédez à votre compte</p>
+    </div>
+
+    <form class="auth-form">
+      <ion-item lines="none" class="form-item">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input [(ngModel)]="loginData.email" placeholder="votre@email.com" type="email" name="email"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none" class="form-item">
+        <ion-label position="floating">Mot de passe</ion-label>
+        <ion-input [(ngModel)]="loginData.password" placeholder="••••••••" type="password" name="password"></ion-input>
+      </ion-item>
+
+      <div *ngIf="messageErreur" class="error-message">
+        {{ messageErreur }}
+      </div>
+
+      <ion-button expand="block" color="primary" (click)="onLogin()" class="auth-button">
+        Se connecter
+      </ion-button>
+    </form>
+
+    <div class="auth-footer">
+      <p>Pas encore de compte?</p>
+      <ion-button fill="clear" routerLink="/inscription" class="link-button">
+        Créer un compte
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

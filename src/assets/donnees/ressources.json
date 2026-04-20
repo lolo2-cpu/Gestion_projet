@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nom": "Serveur de développement",
+    "type": "Matériel",
+    "description": "Serveur dédié pour l'environnement de développement",
+    "quantite": 1,
+    "cout": 5000
+  },
+  {
+    "id": 2,
+    "nom": "Licence Adobe Creative Suite",
+    "type": "Logiciel",
+    "description": "Suite logicielle pour la conception graphique",
+    "quantite": 3,
+    "cout": 1800
+  },
+  {
+    "id": 3,
+    "nom": "Formation Angular",
+    "type": "Formation",
+    "description": "Formation en ligne pour l'équipe de développement",
+    "quantite": 5,
+    "cout": 1500
+  }
+]

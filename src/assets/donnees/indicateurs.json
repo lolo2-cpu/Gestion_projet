@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "nom": "Nombre total de projets",
+    "valeur": 12,
+    "unite": "projets",
+    "evolution": "+2"
+  },
+  {
+    "id": 2,
+    "nom": "Tâches en cours",
+    "valeur": 45,
+    "unite": "tâches",
+    "evolution": "+5"
+  },
+  {
+    "id": 3,
+    "nom": "Utilisateurs actifs",
+    "valeur": 8,
+    "unite": "utilisateurs",
+    "evolution": "+1"
+  },
+  {
+    "id": 4,
+    "nom": "Budget total",
+    "valeur": 225000,
+    "unite": "€",
+    "evolution": "+15000"
+  }
+]

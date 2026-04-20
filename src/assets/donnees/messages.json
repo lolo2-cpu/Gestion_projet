@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "expediteur": "Jean Dupont",
+    "destinataire": "Marie Martin",
+    "sujet": "Mise à jour du projet Alpha",
+    "contenu": "Le projet Alpha avance bien. La phase de développement est terminée.",
+    "date": "2024-01-15T10:30:00Z",
+    "lu": false
+  },
+  {
+    "id": 2,
+    "expediteur": "Marie Martin",
+    "destinataire": "Pierre Dubois",
+    "sujet": "Réunion équipe demain",
+    "contenu": "Rappel de la réunion d'équipe demain à 14h en salle de conférence.",
+    "date": "2024-01-14T16:45:00Z",
+    "lu": true
+  }
+]

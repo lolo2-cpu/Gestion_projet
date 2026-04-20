@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "titre": "Analyse des besoins",
+    "description": "Recueillir et analyser les besoins utilisateurs",
+    "statut": "Terminée",
+    "priorite": "Haute",
+    "assignéA": 1,
+    "projetId": 1
+  },
+  {
+    "id": 2,
+    "titre": "Conception de l'architecture",
+    "description": "Définir l'architecture technique du projet",
+    "statut": "En cours",
+    "priorite": "Haute",
+    "assignéA": 2,
+    "projetId": 1
+  },
+  {
+    "id": 3,
+    "titre": "Développement du module utilisateur",
+    "description": "Implémenter le module de gestion des utilisateurs",
+    "statut": "En cours",
+    "priorite": "Moyenne",
+    "assignéA": 1,
+    "projetId": 2
+  }
+]

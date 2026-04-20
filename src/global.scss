@@ -1,12 +1,6 @@
 /*
  * App Global CSS
- * ----------------------------------------------------------------------------
- * Put style rules here that you want to apply globally. These styles are for
- * the entire app and not just one component. Additionally, this file can be
- * used as an entry point to import other CSS/Sass files to be included in the
- * output CSS.
- * For more information on global stylesheets, visit the documentation:
- * https://ionicframework.com/docs/layout/global-stylesheets
+ * Styles globaux améliorés avec design moderne
  */
 
 /* Core CSS required for Ionic components to work properly */
@@ -25,13 +19,213 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
-/**
- * Ionic Dark Mode
- * -----------------------------------------------------
- * For more info, please see:
- * https://ionicframework.com/docs/theming/dark-mode
- */
+/* Variables de design */
+$primary-blue: #2563EB;
+$success-green: #22C55E;
+$danger-red: #EF4444;
+$light-gray: #F3F4F6;
+$dark-gray: #1F2937;
+$secondary-blue: #1e40af;
+$border-radius: 16px;
+$box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+$box-shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.12);
+$transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-/* @import "@ionic/angular/css/palettes/dark.always.css"; */
-/* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+/* Typographie globale */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background-color: #fff;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: $dark-gray;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: $dark-gray;
+  margin-bottom: 12px;
+}
+
+p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Cartes améliorées */
+ion-card {
+  border-radius: $border-radius;
+  margin-bottom: 20px;
+  box-shadow: $box-shadow;
+  border: none;
+  background: linear-gradient(135deg, #ffffff 0%, #fafbfc 100%);
+  overflow: hidden;
+  transition: $transition;
+
+  &:hover {
+    box-shadow: $box-shadow-hover;
+    transform: translateY(-2px);
+  }
+
+  ion-card-header {
+    background: linear-gradient(135deg, $primary-blue, $secondary-blue);
+    padding: 20px;
+    color: white;
+
+    ion-card-title {
+      font-weight: 600;
+      font-size: 18px;
+      margin: 0;
+    }
+  }
+
+  ion-card-content {
+    padding: 20px;
+  }
+}
+
+/* Boutons améliorés */
+ion-button {
+  --border-radius: 12px;
+  --padding-start: 24px;
+  --padding-end: 24px;
+  font-weight: 600;
+  text-transform: none;
+  transition: $transition;
+  box-shadow: $box-shadow;
+
+  &[color="primary"] {
+    --background: linear-gradient(135deg, $primary-blue, $secondary-blue);
+    --background-hover: linear-gradient(135deg, $secondary-blue, #1e40af);
+  }
+
+  &[color="success"] {
+    --background: $success-green;
+  }
+
+  &[color="danger"] {
+    --background: $danger-red;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+/* En-têtes */
+ion-header {
+  box-shadow: $box-shadow;
+}
+
+ion-toolbar {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  height: 60px;
+  --min-height: 60px;
+
+  ion-title {
+    font-weight: 600;
+    font-size: 20px;
+  }
+}
+
+/* Contenu */
+ion-content {
+  --background: #f8f9fa;
+}
+
+/* Listes */
+ion-list {
+  background: transparent;
+  
+  ion-item {
+    --background: white;
+    --padding-start: 16px;
+    --padding-end: 16px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: $transition;
+
+    &:hover {
+      box-shadow: $box-shadow;
+      border-color: $primary-blue;
+    }
+  }
+}
+
+/* Entrées de formulaire */
+ion-input,
+ion-textarea,
+ion-select {
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --background: white;
+  --border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  transition: $transition;
+
+  &:focus {
+    border-color: $primary-blue;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+}
+
+/* Animation des transitions */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+ion-page {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Utilitaires */
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: $primary-blue;
+}
+
+.text-success {
+  color: $success-green;
+}
+
+.text-danger {
+  color: $danger-red;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.p-20 {
+  padding: 20px;
+}

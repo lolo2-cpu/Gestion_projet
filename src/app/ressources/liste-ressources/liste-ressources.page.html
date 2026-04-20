@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Liste des ressources</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Liste des ressources</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item *ngFor="let ressource of ressources">
+      <ion-label>
+        <h2>{{ ressource.nom }}</h2>
+        <p>Type: {{ ressource.type }} | Quantité: {{ ressource.quantite }}</p>
+        <p>Coût: {{ ressource.cout }}€</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

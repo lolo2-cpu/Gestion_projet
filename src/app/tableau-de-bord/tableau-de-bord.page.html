@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Tableau de bord</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="dashboard-header">
+    <h2>Vue d'ensemble</h2>
+    <p>Suivi de vos activités principales</p>
+  </div>
+
+  <div class="widgets-container">
+    <app-widget-statistique
+      titre="Projets"
+      valeur="12">
+    </app-widget-statistique>
+
+    <app-widget-statistique
+      titre="Tâches"
+      valeur="45">
+    </app-widget-statistique>
+
+    <app-widget-statistique
+      titre="Utilisateurs"
+      valeur="8">
+    </app-widget-statistique>
+  </div>
+</ion-content>
