@@ -1,20 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { ActivatedRoute } from '@angular/router';
+import { ProjetService } from 'src/app/coeur/services/projet.service';
+import { sharedImports } from '../../share.imports';
 
 @Component({
   selector: 'app-detail-projet',
   templateUrl: './detail-projet.page.html',
   styleUrls: ['./detail-projet.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: sharedImports,
 })
 export class DetailProjetPage implements OnInit {
 
-  constructor() { }
+  projet: any;
 
-  ngOnInit() {
+  constructor(
+    private route: ActivatedRoute,
+    private projetService: ProjetService
+  ) { }
+
+  async ngOnInit() {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    await this.projetService.chargerProjets();
+    this.projet = this.projetService.getProjetById(id);
   }
-
 }

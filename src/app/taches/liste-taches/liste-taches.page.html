@@ -19,9 +19,9 @@
   </div>
 
   <div class="tasks-filters">
-    <ion-chip color="primary" outline>Toutes</ion-chip>
-    <ion-chip outline>En cours</ion-chip>
-    <ion-chip outline>Terminées</ion-chip>
+    <ion-chip button outline [color]="currentFilter === 'Toutes' ? 'primary' : 'medium'" (click)="applyFilter('Toutes')">Toutes</ion-chip>
+    <ion-chip button outline [color]="currentFilter === 'En cours' ? 'primary' : 'medium'" (click)="applyFilter('En cours')">En cours</ion-chip>
+    <ion-chip button outline [color]="currentFilter === 'Terminées' ? 'primary' : 'medium'" (click)="applyFilter('Terminées')">Terminées</ion-chip>
   </div>
 
   <div class="tasks-list">
@@ -34,8 +34,8 @@
         </div>
         <p class="task-description">Description de la tâche</p>
         <div class="task-footer">
-          <ion-button size="small" fill="clear">Détails</ion-button>
-          <ion-button size="small" fill="clear">Supprimer</ion-button>
+          <ion-button size="small" fill="clear" [routerLink]="['/detail-tache', tache.id]">Détails</ion-button>
+          <ion-button size="small" fill="clear" color="danger" (click)="supprimer(tache.id)">Supprimer</ion-button>
         </div>
       </ion-card-content>
     </ion-card>

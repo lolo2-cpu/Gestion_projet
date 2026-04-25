@@ -7,7 +7,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'connexion',
     pathMatch: 'full',
   },
   {
@@ -51,7 +51,7 @@ export const routes: Routes = [
     loadComponent: () => import('./rapports/rapports.page').then( m => m.RapportsPage)
   },
   {
-    path: 'detail-projet',
+    path: 'detail-projet/:id',
     loadComponent: () => import('./projets/detail-projet/detail-projet.page').then( m => m.DetailProjetPage)
   },
   {
@@ -59,7 +59,7 @@ export const routes: Routes = [
     loadComponent: () => import('./projets/creation-projet/creation-projet.page').then( m => m.CreationProjetPage)
   },
   {
-    path: 'detail-tache',
+    path: 'detail-tache/:id',
     loadComponent: () => import('./taches/detail-tache/detail-tache.page').then( m => m.DetailTachePage)
   },
   {

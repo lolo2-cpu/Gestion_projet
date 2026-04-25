@@ -4,6 +4,7 @@
     "nom": "Dupont",
     "prenom": "Jean",
     "email": "jean.dupont@email.com",
+    "password": "123458",
     "role": "Développeur",
     "avatar": "assets/icon/default-avatar.png"
   },
@@ -12,6 +13,7 @@
     "nom": "Martin",
     "prenom": "Marie",
     "email": "marie.martin@email.com",
+    "password": "123457",
     "role": "Chef de projet",
     "avatar": "assets/icon/default-avatar.png"
   },
@@ -20,6 +22,7 @@
     "nom": "Dubois",
     "prenom": "Pierre",
     "email": "pierre.dubois@email.com",
+    "password": "123456",
     "role": "Designer",
     "avatar": "assets/icon/default-avatar.png"
   }

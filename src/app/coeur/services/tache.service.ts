@@ -18,6 +18,10 @@ export class TacheService {
     return this.taches.filter(t => t.projetId === projetId);
   }
 
+  getTacheById(id: number) {
+    return this.taches.find(t => t.id === id);
+  }
+
   ajouterTache(tache: any) {
     tache.id = Date.now();
     this.taches.push(tache);

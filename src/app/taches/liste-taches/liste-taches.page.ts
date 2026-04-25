@@ -15,11 +15,31 @@ import { sharedImports } from '../../share.imports';
 export class ListeTachesPage implements OnInit {
 
   taches: any[] = [];
+  currentFilter = 'Toutes';
 
   constructor(private tacheService: TacheService) {}
 
   async ngOnInit() {
     await this.tacheService.chargerTaches();
     this.taches = this.tacheService.taches;
+    this.applyFilter(this.currentFilter);
+  }
+
+  applyFilter(filter: string) {
+    this.currentFilter = filter;
+
+    if (filter === 'Toutes') {
+      this.taches = this.tacheService.taches;
+      return;
+    }
+
+    const statut = filter === 'En cours' ? 'En cours' : 'Terminée';
+    this.taches = this.tacheService.taches.filter(t => t.statut === statut);
+  }
+
+  supprimer(id: number) {
+    this.tacheService.taches = this.tacheService.taches.filter(t => t.id !== id);
+    this.applyFilter(this.currentFilter);
+    this.tacheService.sauvegarder();
   }
 }

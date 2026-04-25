@@ -12,11 +12,21 @@ export class ProjetService {
   constructor(private dataService: DonneesJsonService) {}
 
   async chargerProjets() {
+    const stored = localStorage.getItem('projets');
+    if (stored) {
+      this.projets = JSON.parse(stored);
+      return;
+    }
     this.projets = await this.dataService.chargerFichier('projets.json');
+    this.sauvegarder();
   }
 
   getProjets() {
     return this.projets;
+  }
+
+  getProjetById(id: number) {
+    return this.projets.find(p => p.id === id);
   }
 
   ajouterProjet(projet: any) {
